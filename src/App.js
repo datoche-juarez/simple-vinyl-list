@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import VinylList from "./VinylList";
 import { v4 as uuidv4 } from "uuid";
+import './App.css';
 
 const LOCAL_STORAGE_KEY = "vinylApp.vinyls";
 
@@ -40,17 +41,21 @@ function App() {
 
   return (
     <>
+    <div className="list-container">
+      <div className="list-item-container">
       <VinylList vinyls={vinyls} toggleVinyl={toggleVinyl} />
+      </div>
       <input ref={vinylNameRef} type="text" />
-      <button onClick={handleAddVinyl}>Add Album</button>
-      <button onClick={handleClearVinyls}>Clear Checked</button>
-      {vinyls.filter((vinyl) => !vinyl.complete).length == 1 ? (
+      <button id="add-album-btn"onClick={handleAddVinyl}>Add Album</button>
+      <button id="clear-checked-btn" onClick={handleClearVinyls}>Clear Checked</button>
+      {vinyls.filter((vinyl) => !vinyl.complete).length === 1 ? (
         <div>
           {vinyls.filter((vinyl) => !vinyl.complete).length} album left
         </div>
       ) : (
         <div>{vinyls.filter((vinyl) => !vinyl.complete).length} albums left</div>
       )}
+      </div>
     </>
   );
 }
