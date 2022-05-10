@@ -42,10 +42,13 @@ function App() {
   return (
     <>
     <div className="list-container">
+      <div className="list-title">
+        <h2>Vinyl Shopping List</h2>
+      </div>
       <div className="list-item-container">
       <VinylList vinyls={vinyls} toggleVinyl={toggleVinyl} />
       </div>
-      <input ref={vinylNameRef} type="text" />
+      <input ref={vinylNameRef} type="text" className="vinyl-input" />
       <button id="add-album-btn"onClick={handleAddVinyl}>Add Album</button>
       <button id="clear-checked-btn" onClick={handleClearVinyls}>Clear Checked</button>
       {vinyls.filter((vinyl) => !vinyl.complete).length === 1 ? (

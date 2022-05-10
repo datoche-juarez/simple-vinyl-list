@@ -1,4 +1,4 @@
-#root{
+#root {
   background-color: rgb(69, 70, 69) !important;
   color: rgb(255, 255, 255) !important;
   font-family: Helvetica;
@@ -11,23 +11,45 @@
   padding: 20px;
 }
 
+.list-title {
+  text-shadow: 0px 0px 15px rgb(141, 220, 182)!important;
+}
+
 .list-item-container {
   /* background-color: rgb(114, 113, 113) !important; */
   padding: 10px;
   margin: 10px;
 }
 
-#add-album-btn {
-  background-color: rgb(250, 46, 27) !important;
-  padding: 5px;
+.vinyl-input {
   margin: 5px;
-  color: #fff;
 }
 
-
-#clear-checked-btn {
-  background-color: rgb(250, 46, 27) !important;
+#add-album-btn {
+  background-color: rgb(88, 119, 254) !important;
   padding: 5px;
   margin: 5px;
   color: #fff;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  border: .5px solid rgb(18, 150, 254);
+ 
+}
+
+#add-album-btn:hover {
+  background-color: rgb(40, 79, 251) !important;
+}
+
+#clear-checked-btn {
+  background-color: rgb(247, 96, 82) !important;
+  padding: 5px;
+  margin: 5px;
+  color: #fff;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  border: .5px solid rgb(255, 187, 187);
+}
+
+#clear-checked-btn:hover {
+  background-color: rgb(250, 46, 27) !important;
 }
