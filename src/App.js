@@ -42,8 +42,8 @@ function App() {
     <>
       <VinylList vinyls={vinyls} toggleVinyl={toggleVinyl} />
       <input ref={vinylNameRef} type="text" />
-      <button onClick={handleAddVinyl}>Add Item</button>
-      <button onClick={handleClearVinyls}>Clear Completed</button>
+      <button onClick={handleAddVinyl}>Add Album</button>
+      <button onClick={handleClearVinyls}>Clear Checked</button>
       {vinyls.filter((vinyl) => !vinyl.complete).length == 1 ? (
         <div>
           {vinyls.filter((vinyl) => !vinyl.complete).length} album left
